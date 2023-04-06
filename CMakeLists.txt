@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.0)
+project(przetwarzanieObrazow)
+include_directories(inc)
+file(GLOB SOURCE "src/*.c" "inc/*.h")
+add_executable(${PROJECT_NAME} ${SOURCE})
+target_link_libraries(przetwarzanieObrazow m)
+set_property(TARGET przetwarzanieObrazow PROPERTY C_STANDARD 99)
+add_compile_options(-Wall -Wextra -pedantic -Werror)
